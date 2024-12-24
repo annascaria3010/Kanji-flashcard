@@ -1,0 +1,10 @@
+.Nav-bar{
+    display: flex;
+    font-size: 24px;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.titles {
+    padding: 2rem;
+}
