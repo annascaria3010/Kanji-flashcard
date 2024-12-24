@@ -1,9 +1,14 @@
 import React from 'react'
 import './App.css'
+import Header from './components/Header/Header'
+import Navbar from './components/Navbar/Navbar'
 
 const App = () => {
   return (
-    <div className='Home'>App</div>
+    <div className='Home'>
+      <Header/>
+      <Navbar/>
+    </div>
   )
 }
 
