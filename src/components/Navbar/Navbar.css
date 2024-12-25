@@ -1,4 +1,4 @@
-.Nav-bar{
+/* .Nav-bar{
     display: flex;
     font-size: 24px;
     justify-content: center;
@@ -7,4 +7,53 @@
 
 .titles {
     padding: 2rem;
-}
+} */
+
+/* Navbar styles */
+.Nav-bar {
+    display: flex;
+    background-color: #000000;
+    font-size: 20px;
+    justify-content: center;
+    padding: 10px;
+    color: white;
+  }
+  
+  .titles {
+    margin: 0 30px;
+    cursor: pointer;
+    position: relative; /* For dropdown positioning */
+  }
+  
+  .titles:hover {
+    color: #DE8888; /* Highlight on hover */
+  }
+  
+  .settings {
+    position: relative;
+  }
+  
+  /* Dropdown styles */
+  .dropdown {
+    position: absolute;
+    top: 130%;
+    left: 0;
+    background-color: #713030;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 1000;
+  }
+  
+  .dropdown-item {
+    padding: 10px 15px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #DE8888;
+    color: #000000;
+  }
+  
