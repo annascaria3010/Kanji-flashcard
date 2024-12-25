@@ -1,8 +1,13 @@
 import React from 'react'
+import Header from './components/Header/Header'
+import Navbar from './components/Navbar/Navbar'
 
 const flashCard = () => {
   return (
-    <div>flashCard</div>
+    <div className='Home'>
+    <Header/>
+    <Navbar/>
+     flashCard</div>
   )
 }
 

@@ -23,6 +23,7 @@
     margin: 0 30px;
     cursor: pointer;
     position: relative; /* For dropdown positioning */
+    color: #fff;
   }
   
   .titles:hover {

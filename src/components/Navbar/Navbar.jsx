@@ -1,28 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
-  const [dropdownVisible, setDropdownVisible] = useState(false);
-
-  const toggleDropdown = () => {
-    setDropdownVisible((prevState) => !prevState);
-  };
-
   return (
     <div className="Nav-bar">
-      <div className="titles">Home</div>
-      <div className="titles">Flash Cards</div>
-      <div className="titles">Quiz</div>
-      <div className="titles settings" onClick={toggleDropdown}>
-        Settings
-        {dropdownVisible && (
-          <div className="dropdown">
-            <div className="dropdown-item" >Add</div>
-            <div className="dropdown-item">Edit</div>
-            <div className="dropdown-item">Delete</div>
-          </div>
-        )}
-      </div>
+      <Link to="/" className="titles">Home</Link>
+      <Link to="/flash-cards" className="titles">Flash Cards</Link>
+      <Link to="/quiz" className="titles">Quiz</Link>
+      <Link to="/settings" className="titles">Settings</Link>
     </div>
   );
 };

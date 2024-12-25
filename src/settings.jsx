@@ -1,7 +1,14 @@
 import React from 'react'
+import Header from './components/Header/Header'
+import Navbar from './components/Navbar/Navbar'
 
-export const settings = () => {
+const settings = () => {
   return (
-    <div>settings</div>
+    <div className='Home'>
+    <Header/>
+    <Navbar/>
+    settings</div>
   )
 }
+
+export default settings
