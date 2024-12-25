@@ -7,7 +7,7 @@ const quiz = () => {
     <div className='Home'>
     <Header/>
     <Navbar/>
-    quiz
+   <h1 className='Heading'>Quiz</h1>
     </div>
   )
 }

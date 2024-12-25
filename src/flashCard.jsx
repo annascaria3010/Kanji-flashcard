@@ -7,7 +7,8 @@ const flashCard = () => {
     <div className='Home'>
     <Header/>
     <Navbar/>
-     flashCard</div>
+     <h1>Flash Card</h1>
+     </div>
   )
 }
 
