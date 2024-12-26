@@ -3,25 +3,28 @@
   height: 100vh;
 }
 
+.headings{
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
 .kanji-table {
  display: flex;
  flex-direction: column;
- align-items: start;
+ align-items: center;
  
 }
 
 .kanji-details {
   padding: 15px;
-  font-size: 20px;
-}
-
-.kanji-details a {
+  font-size: 24px;
   text-decoration: none;
   color: black;
-  font-weight: bold;
 }
 
-.kanji-details a:hover {
+
+.kanji-details :hover {
   color: #ffffff;
 }
 
