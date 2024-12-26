@@ -3,6 +3,28 @@
   height: 100vh;
 }
 
+.kanji-table {
+ display: flex;
+ flex-direction: column;
+ align-items: start;
+ 
+}
+
+.kanji-details {
+  padding: 15px;
+  font-size: 20px;
+}
+
+.kanji-details a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.kanji-details a:hover {
+  color: #ffffff;
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
