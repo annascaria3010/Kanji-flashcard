@@ -53,7 +53,11 @@ const FlashCard = () => {
           onClick={handleCardClick}
         >
           <div className="flashcard-front">{currentKanji}</div>
-          <div className="flashcard-back">Meaning/Info</div>
+          <div className="flashcard-back">
+            <span className='flashcard-backlist'>Meaning:</span>
+            <span className='flashcard-backlist'>On Reading:</span>
+            <span className='flashcard-backlist'>Kun Reading:</span>
+          </div>
         </div>
       </div>
       <button className="next-button" onClick={handleNextClick}>
