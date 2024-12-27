@@ -20,6 +20,7 @@ const FlashCard = () => {
   ];
 
   const [currentKanji, setCurrentKanji] = useState("");
+  const [isFlipped, setIsFlipped] = useState(false);
 
   // Function to get random Kanji characters
   const getRandomKanji = () => {
@@ -32,17 +33,28 @@ const FlashCard = () => {
     setCurrentKanji(getRandomKanji());
   }, []);
 
+  const handleCardClick = () => {
+    setIsFlipped((prev) => !prev); // Toggle the flip state
+  };
+
   const handleNextClick = () => {
     setCurrentKanji(getRandomKanji());
+    setIsFlipped(false);
   };
 
    return (
     <div className="Home">
       <Header />
       <Navbar />
-      <h1>Flash Card</h1>
+      <h1 className='flashCard-Heading'>Flash Card</h1>
       <div className="flashcard-container">
-        <div className="flashcard">{currentKanji}</div>
+      <div
+          className={`flashcard ${isFlipped ? "flipped" : ""}`}
+          onClick={handleCardClick}
+        >
+          <div className="flashcard-front">{currentKanji}</div>
+          <div className="flashcard-back">Meaning/Info</div>
+        </div>
       </div>
       <button className="next-button" onClick={handleNextClick}>
         Next
