@@ -1,33 +1,31 @@
 import React, { useState } from 'react';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
-import './flashCard.css'
+import './flashCard.css';
 
 
-const FlashCard = () => {
-
-  
-
-  const [currentKanji, setCurrentKanji] = useState("");
+const FlashCard = ({ kanjiList }) => {
+  const [currentIndex, setCurrentIndex] = useState("");
   const [isFlipped, setIsFlipped] = useState(false);
 
   // Function to get random Kanji characters
-  const getRandomKanji = () => {
-    const randomIndex = Math.floor(Math.random() * kanjiLis.length);
-    return kanjiList[randomIndex];
-  };
+  // const getRandomKanji = () => {
+  //   const randomIndex = Math.floor(Math.random() * kanjiList.length);
+  //   return kanjiList[randomIndex];
+  // };
 
   // Set random Kanji on component mount
-  React.useEffect(() => {
-    setCurrentKanji(getRandomKanji());
-  }, []);
 
-  const handleCardClick = () => {
-    setIsFlipped((prev) => !prev); // Toggle the flip state
+  const currentKanji = kanjiList[currentIndex];
+ 
+
+  const handleFlip = () => {
+    setIsFlipped(!isFlipped); // Toggle the flip state
   };
 
-  const handleNextClick = () => {
-    setCurrentKanji(getRandomKanji());
+  const handleNext = () => {
+    const randomIndex = Math.floor(Math.random() * kanjiList.length); // Get a random index
+    setCurrentIndex(randomIndex);
     setIsFlipped(false);
   };
 
@@ -39,19 +37,24 @@ const FlashCard = () => {
       <div className="flashcard-container">
       <div
           className={`flashcard ${isFlipped ? "flipped" : ""}`}
-          onClick={handleCardClick}
+          onClick={handleFlip}
         >
-          <div className="flashcard-front">{currentKanji}</div>
-          <div className="flashcard-back">
-            <span className='flashcard-backlist'>Meaning:</span>
-            <span className='flashcard-backlist'>On Reading:</span>
-            <span className='flashcard-backlist'>Kun Reading:</span>
+          {!isFlipped ? (
+          // Front of the card: Display the Kanji
+          <div className="front">
+            <h1>{currentKanji.kanji}</h1>
           </div>
-        </div>
+        ) : (
+          // Back of the card: Display details
+          <div className="back">
+            <p><strong>Meaning:</strong> {currentKanji.meaning}</p>
+            <p><strong>On'yomi:</strong> {currentKanji.onyomi}</p>
+            <p><strong>Kun'yomi:</strong> {currentKanji.kunyomi}</p>
+          </div>
+        )}
       </div>
-      <button className="next-button" onClick={handleNextClick}>
-        Next
-      </button>
+      <button onClick={handleNext} className="next-button">Next</button>
+    </div>
     </div>
   );
 };
