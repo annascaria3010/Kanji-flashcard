@@ -3,13 +3,14 @@
     justify-content: center;
     align-items: center;
     margin: 50px;
+    flex-direction: column;
   }
 
   .flashCard-Heading{
     display: flex;
-  justify-content: center;
-  margin-top: 4rem;
-  padding: 16px;
+    justify-content: center;
+    margin-top: 4rem;
+    padding: 16px;
   }
   
   .flashcard {
@@ -39,7 +40,7 @@
   .flashcard-front {
     background-color: #713030;
     color: #fff;
-    font-size: 92px;
+    font-size: 82px;
   }
   
   .flashcard-back {

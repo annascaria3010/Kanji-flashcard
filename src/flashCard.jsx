@@ -2,9 +2,14 @@ import React, { useState } from 'react';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import './flashCard.css';
+import kanjiList from './kanjiList';
 
 
-const FlashCard = ({ kanjiList }) => {
+const FlashCard = () => {
+  if (!kanjiList.length) {
+    return <div>No Kanji data available.</div>; // Fallback for empty or undefined kanjiList
+  }
+  
   const [currentIndex, setCurrentIndex] = useState(Math.floor(Math.random() * kanjiList.length));
   const [isFlipped, setIsFlipped] = useState(false);
 
@@ -16,7 +21,7 @@ const FlashCard = ({ kanjiList }) => {
 
   // Set random Kanji on component mount
 
-  const currentKanji = kanjiList[currentIndex];
+  
  
 
   const handleFlip = () => {
@@ -28,6 +33,8 @@ const FlashCard = ({ kanjiList }) => {
     setCurrentIndex(randomIndex);
     setIsFlipped(false);
   };
+
+  const currentKanji = kanjiList[currentIndex];
 
    return (
     <div className="Home">
@@ -41,15 +48,15 @@ const FlashCard = ({ kanjiList }) => {
         >
           {!isFlipped ? (
           // Front of the card: Display the Kanji
-          <div className="front">
+          <div className="flashcard-front">
             <h1>{currentKanji.kanji}</h1>
           </div>
         ) : (
           // Back of the card: Display details
-          <div className="back">
-            <p><strong>Meaning:</strong> {currentKanji.meaning}</p>
-            <p><strong>On'yomi:</strong> {currentKanji.onyomi}</p>
-            <p><strong>Kun'yomi:</strong> {currentKanji.kunyomi}</p>
+          <div className="flashcard-back">
+            <p className='flashcard-backlist'><strong>Meaning:</strong> {currentKanji.meaning}</p>
+            <p className='flashcard-backlist'><strong>On'yomi:</strong> {currentKanji.onyomi}</p>
+            <p className='flashcard-backlist'><strong>Kun'yomi:</strong> {currentKanji.kunyomi}</p>
           </div>
         )}
       </div>

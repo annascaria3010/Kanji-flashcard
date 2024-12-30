@@ -103,3 +103,5 @@ const kanjiList = [
   { kanji: "高", meaning: "high", onyomi: "こう (kou)", kunyomi: "たか-い (taka-i)" },
   { kanji: "魚", meaning: "fish", onyomi: "ぎょ (gyo)", kunyomi: "さかな (sakana)" }
 ];
+
+export default kanjiList;
