@@ -5,7 +5,7 @@ import './flashCard.css';
 
 
 const FlashCard = ({ kanjiList }) => {
-  const [currentIndex, setCurrentIndex] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(Math.floor(Math.random() * kanjiList.length));
   const [isFlipped, setIsFlipped] = useState(false);
 
   // Function to get random Kanji characters

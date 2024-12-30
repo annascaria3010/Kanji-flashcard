@@ -26,8 +26,6 @@ const App = () => {
     <td className="kanji-details"><a id="13">日</a></td>
   </tr>
   <tr>
-    
-    
     <td className="kanji-details"><a id="14">週</a></td>
     <td className="kanji-details"><a id="15">月</a></td>
     <td className="kanji-details"><a id="16">年</a></td>
@@ -43,8 +41,6 @@ const App = () => {
     <td className="kanji-details"><a id="26">火</a></td>
   </tr>
   <tr>
-    
-    
     <td className="kanji-details"><a id="27">父</a></td>
     <td className="kanji-details"><a id="28">母</a></td>
     <td className="kanji-details"><a id="29">耳</a></td>
@@ -60,8 +56,6 @@ const App = () => {
     <td className="kanji-details"><a id="39">友</a></td>
   </tr>
   <tr>
-    
-    
     <td className="kanji-details"><a id="40">古</a></td>
     <td className="kanji-details"><a id="41">名</a></td>
     <td className="kanji-details"><a id="42">国</a></td>
@@ -77,7 +71,6 @@ const App = () => {
     <td className="kanji-details"><a id="52">先</a></td>
   </tr>
   <tr>
-    
     <td className="kanji-details"><a id="53">会</a></td>
     <td className="kanji-details"><a id="54">万</a></td>
     <td className="kanji-details"><a id="55">円</a></td>
@@ -92,8 +85,7 @@ const App = () => {
     <td className="kanji-details"><a id="64">安</a></td>
     <td className="kanji-details"><a id="65">少</a></td>
   </tr>
-  <tr>
-    
+  <tr>    
     <td className="kanji-details"><a id="66">店</a></td>
     <td className="kanji-details"><a id="67">後</a></td>
     <td className="kanji-details"><a id="68">手</a></td>
@@ -137,8 +129,7 @@ const App = () => {
     <td className="kanji-details"><a id="102">高</a></td>
     <td className="kanji-details"><a id="103">魚</a></td>
   </tr>
-  
- 
+   
       </table>
 
     </div>
