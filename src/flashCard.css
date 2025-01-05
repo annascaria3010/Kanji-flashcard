@@ -15,7 +15,7 @@
   
   .flashcard {
     position: relative;
-    width: 300px;
+    width: 400px;
     height: 350px;
     perspective: 1000px;
     cursor: pointer;
