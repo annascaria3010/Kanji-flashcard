@@ -13,17 +13,6 @@ const FlashCard = () => {
   const [currentIndex, setCurrentIndex] = useState(Math.floor(Math.random() * kanjiList.length));
   const [isFlipped, setIsFlipped] = useState(false);
 
-  // Function to get random Kanji characters
-  // const getRandomKanji = () => {
-  //   const randomIndex = Math.floor(Math.random() * kanjiList.length);
-  //   return kanjiList[randomIndex];
-  // };
-
-  // Set random Kanji on component mount
-
-  
- 
-
   const handleFlip = () => {
     setIsFlipped(!isFlipped); // Toggle the flip state
   };
@@ -47,12 +36,12 @@ const FlashCard = () => {
           onClick={handleFlip}
         >
           {!isFlipped ? (
-          // Front of the card: Display the Kanji
+          
           <div className="flashcard-front">
             <h1>{currentKanji.kanji}</h1>
           </div>
         ) : (
-          // Back of the card: Display details
+          
           <div className="flashcard-back">
             <p className='flashcard-backlist'><strong>Meaning:</strong> {currentKanji.meaning}</p>
             <p className='flashcard-backlist'><strong>On'yomi:</strong> {currentKanji.onyomi}</p>

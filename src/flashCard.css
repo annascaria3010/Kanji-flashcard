@@ -59,11 +59,11 @@
   }
 
   .flipped .flashcard-front {
-    transform: rotateY(180deg);
+    transform: rotateY(360deg);
   }
   
   .flipped .flashcard-back {
-    transform: rotateY(0deg);
+    transform: rotateY(360deg);
   }
 
   .flashcard-front:hover{
