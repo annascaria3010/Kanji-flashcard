@@ -39,6 +39,7 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    
   }
   
   .quiz-option:hover {
@@ -54,6 +55,8 @@
   }
   
   .nextQuiz-button {
+    text-align: center;
+    margin: 20px auto;
     margin-top: 20px;
     padding: 10px 20px;
     background-color: #ffffff;
@@ -67,6 +70,6 @@
   }
   
   .nextQuiz-button:hover {
-    background-color: #0056b3;
+    background-color: #5bb843;
   }
   
