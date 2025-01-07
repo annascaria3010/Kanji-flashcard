@@ -58,8 +58,9 @@ const quiz = () => {
           ))}
         </div>
         {message && <div className="quiz-message">{message}</div>}
-      <button onClick={handleNext} className="nextQuiz-button">Next</button>
+      
    </div>
+   <button onClick={handleNext} className="nextQuiz-button">Next</button>
     </div>
   )
 }
