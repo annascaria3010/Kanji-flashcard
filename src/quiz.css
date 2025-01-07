@@ -1,25 +1,30 @@
-
+.Heading{
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    padding: 16px;
+  }
 
 .quiz-box {
     text-align: center;
     margin: 20px auto;
-    margin-top: 5rem;
-    background-color: #fdfdfd;
+    margin-top: 50px;
+    background-color: #2a9d8f;
     max-width: 400px;
     padding: 10px;
-    border: 1px solid #ffffff;
+    
     border-radius: 15px;
   }
 
   .kanji{
-    color:#000000;
+    color:#ffffff;
     font-size: 58px;
-    background-color: #DE8888;
+    background-color: #264653;
     max-width: 200px;
     display: flex;
     justify-content: center;
     margin-inline: 100px;
-    border: 1px solid #DE8888;
+    
     border-radius:10px;
     padding: 20px 20px;
   }
@@ -34,7 +39,7 @@
   
   .quiz-option {
     padding: 10px;
-    background-color: #DE8888;
+    background-color: #e9c46a;
     border: 1px solid #ccc;
     border-radius: 5px;
     cursor: pointer;
@@ -55,12 +60,11 @@
   }
   
   .nextQuiz-button {
-    text-align: center;
+    display: block;
     margin: 20px auto;
-    margin-top: 20px;
     padding: 10px 20px;
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #264653;
+    color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -70,6 +74,6 @@
   }
   
   .nextQuiz-button:hover {
-    background-color: #5bb843;
+    background-color: #d34c2a;
   }
   
