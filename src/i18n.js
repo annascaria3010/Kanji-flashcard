@@ -4,15 +4,38 @@ import { initReactI18next } from 'react-i18next';
 i18n.use(initReactI18next).init({
   resources: {
     en: {
-      translation: require('./translations/en.json') 
+      translation: {
+        navbar: {
+          home: "Home",
+          flashCards: "Flash Cards",
+          quiz: "Quiz",
+          settings: "Settings"
+        },
+        header: {
+          title: "Let's Go!",
+          subtitle: "KANJI"
+        }
+      }
     },
-    ja: { 
-      translation:  require('./translations/ja.json') }
+    ja: {
+      translation: {
+        navbar: {
+          home: "ホーム",
+          flashCards: "フラッシュカード",
+          quiz: "クイズ",
+          settings: "設定"
+        },
+        header: {
+          title: "行こう！",
+          subtitle: "漢字"
+        }
+      }
+    }
   },
-  lng: 'en', // Default language
-  fallbackLng: 'en', // Fallback language
+  lng: "en", // Default language
+  fallbackLng: "en", // Fallback language if translation is missing
   interpolation: {
-    escapeValue: false // React already protects against XSS
+    escapeValue: false
   }
 });
 
