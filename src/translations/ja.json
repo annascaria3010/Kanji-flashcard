@@ -1,0 +1,13 @@
+{
+    "header": {
+      "title": "行こう！",
+      "subtitle": "漢字"
+    },
+    "navbar": {
+      "home": "ホーム",
+      "flashCards": "フラッシュカード",
+      "quiz": "クイズ",
+      "settings": "設定"
+    }
+  }
+  

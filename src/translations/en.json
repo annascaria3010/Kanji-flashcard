@@ -1,0 +1,13 @@
+{
+    "header": {
+      "title": "Let's Go!",
+      "subtitle": "KANJI"
+    },
+    "navbar": {
+      "home": "Home",
+      "flashCards": "Flash Cards",
+      "quiz": "Quiz",
+      "settings": "Settings"
+    }
+  }
+  
