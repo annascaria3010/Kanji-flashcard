@@ -28,6 +28,26 @@
   color: #ffffff;
 }
 
+.language-switcher {
+  display: flex;
+  gap: 10px;
+  margin: 20px;
+}
+
+.language-switcher button {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s;
+}
+
+.language-switcher button:hover {
+  background-color: #eaeaea;
+}
+
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,3 +56,5 @@
     transform: rotate(360deg);
   }
 }
+
+

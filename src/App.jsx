@@ -2,12 +2,23 @@ import React from 'react'
 import './App.css'
 import Header from './components/Header/Header'
 import Navbar from './components/Navbar/Navbar'
+import { useTranslation } from 'react-i18next'
 
 const App = () => {
+  const { i18n } = useTranslation();
+
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+  };
+
   return (
     <div className='Home'>
       <Header/>
       <Navbar/>
+      <div className="language-switcher">
+        <button onClick={() => changeLanguage('en')}>English</button>
+        <button onClick={() => changeLanguage('ja')}>日本語</button>
+      </div>
       <h1 className='headings'>JLPT Kanji list</h1>
       <table className="kanji-table">
   <tr>
