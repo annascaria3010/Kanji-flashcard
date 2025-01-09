@@ -6,8 +6,7 @@ import './quiz.css'
 import { useTranslation } from 'react-i18next';
 
 const quiz = () => {
-
-   const { i18n, t } = useTranslation();
+   const { t } = useTranslation();
   
     const changeLanguage = (lang) => {
       i18n.changeLanguage(lang);
@@ -50,10 +49,6 @@ const quiz = () => {
     <div className='Home'>
     <Header/>
     <Navbar/>
-    <div className="language-switcher">
-        <button onClick={() => changeLanguage('en')}>English</button>
-        <button onClick={() => changeLanguage('ja')}>日本語</button>
-      </div>
    <h1 className='Heading'>{t('quiz.heading')}</h1>
    <div className='quiz-box'>
       

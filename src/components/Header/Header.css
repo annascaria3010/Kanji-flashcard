@@ -5,6 +5,11 @@
     display: flex;
     flex-direction: row;
     padding-left: 10rem;
+    justify-content: space-between;
+  }
+  .part-1{
+    display: flex;
+    flex-direction: row;
   }
   
   .header-image {
@@ -21,4 +26,23 @@
     align-items: flex-start;
     padding-left: 1rem;
     padding-top: 1rem;
+  }
+  .language-switcher {
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+    height: 2rem;
+  }
+  .language-switcher button {
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #264653;
+    transition: background-color 0.3s;
+  }
+  
+  .language-switcher button:hover {
+    background-color: #eaeaea;
+    color: #000;
   }
