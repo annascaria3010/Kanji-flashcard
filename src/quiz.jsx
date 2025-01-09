@@ -3,8 +3,16 @@ import Header from './components/Header/Header'
 import Navbar from './components/Navbar/Navbar'
 import kanjiList from './kanjiList';
 import './quiz.css'
+import { useTranslation } from 'react-i18next';
 
 const quiz = () => {
+
+   const { i18n } = useTranslation();
+  
+    const changeLanguage = (lang) => {
+      i18n.changeLanguage(lang);
+    };
+
   const [currentIndex, setCurrentIndex] =useState(Math.floor(Math.random() * kanjiList.length));
   const [options, setOptions] = useState(generateOptions(currentIndex));
   const [message, setMessage] = useState("");
@@ -42,6 +50,10 @@ const quiz = () => {
     <div className='Home'>
     <Header/>
     <Navbar/>
+    <div className="language-switcher">
+        <button onClick={() => changeLanguage('en')}>English</button>
+        <button onClick={() => changeLanguage('ja')}>日本語</button>
+      </div>
    <h1 className='Heading'>Quiz</h1>
    <div className='quiz-box'>
       

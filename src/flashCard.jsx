@@ -3,9 +3,16 @@ import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import './flashCard.css';
 import kanjiList from './kanjiList';
+import { useTranslation } from 'react-i18next';
 
 
 const FlashCard = () => {
+
+   const { i18n } = useTranslation();
+  
+    const changeLanguage = (lang) => {
+      i18n.changeLanguage(lang);
+    };
   if (!kanjiList.length) {
     return <div>No Kanji data available.</div>; // Fallback for empty or undefined kanjiList
   }
@@ -29,6 +36,10 @@ const FlashCard = () => {
     <div className="Home">
       <Header />
       <Navbar />
+      <div className="language-switcher">
+        <button onClick={() => changeLanguage('en')}>English</button>
+        <button onClick={() => changeLanguage('ja')}>日本語</button>
+      </div>
       <h1 className='flashCard-Heading'>Flash Card</h1>
       <div className="flashcard-container">
       <div

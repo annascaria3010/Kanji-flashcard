@@ -8,10 +8,10 @@ const Navbar = () => {
 
   return (
     <div className="Nav-bar">
-    <Link to="/" className="titles">{t('Home')}</Link>
-    <Link to="/flash-cards" className="titles">{t('FlashCards')}</Link>
-    <Link to="/quiz" className="titles">{t('Quiz')}</Link>
-    <Link to="/settings" className="titles">{t('Settings')}</Link>
+    <Link to="/" className="titles">{t('navbar.home')}</Link>
+    <Link to="/flash-cards" className="titles">{t('navbar.flashCards')}</Link>
+    <Link to="/quiz" className="titles">{t('navbar.quiz')}</Link>
+    <Link to="/settings" className="titles">{t('navbar.settings')}</Link>
   </div>
 );
 };
