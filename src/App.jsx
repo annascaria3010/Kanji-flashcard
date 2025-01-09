@@ -5,7 +5,7 @@ import Navbar from './components/Navbar/Navbar'
 import { useTranslation } from 'react-i18next'
 
 const App = () => {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
 
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
@@ -19,7 +19,7 @@ const App = () => {
         <button onClick={() => changeLanguage('en')}>English</button>
         <button onClick={() => changeLanguage('ja')}>日本語</button>
       </div>
-      <h1 className='headings'>JLPT Kanji list</h1>
+      <h1 className='headings'>{t('app.heading')}</h1>
       <table className="kanji-table">
   <tr>
     <td className="kanji-details"><a id="1">一</a></td>

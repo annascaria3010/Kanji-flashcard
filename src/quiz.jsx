@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 
 const quiz = () => {
 
-   const { i18n } = useTranslation();
+   const { i18n, t } = useTranslation();
   
     const changeLanguage = (lang) => {
       i18n.changeLanguage(lang);
@@ -54,7 +54,7 @@ const quiz = () => {
         <button onClick={() => changeLanguage('en')}>English</button>
         <button onClick={() => changeLanguage('ja')}>日本語</button>
       </div>
-   <h1 className='Heading'>Quiz</h1>
+   <h1 className='Heading'>{t('quiz.heading')}</h1>
    <div className='quiz-box'>
       
         <h2 className='kanji'>{currentKanji.kanji}</h2>
@@ -72,7 +72,7 @@ const quiz = () => {
         {message && <div className="quiz-message">{message}</div>}
       
    </div>
-   <button onClick={handleNext} className="nextQuiz-button">Next</button>
+   <button onClick={handleNext} className="nextQuiz-button">{t('flashCards.button')}</button>
     </div>
   )
 }

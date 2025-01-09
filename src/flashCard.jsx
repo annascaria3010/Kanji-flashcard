@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next';
 
 const FlashCard = () => {
 
-   const { i18n } = useTranslation();
+   const { i18n,t } = useTranslation();
   
     const changeLanguage = (lang) => {
       i18n.changeLanguage(lang);
@@ -40,7 +40,7 @@ const FlashCard = () => {
         <button onClick={() => changeLanguage('en')}>English</button>
         <button onClick={() => changeLanguage('ja')}>日本語</button>
       </div>
-      <h1 className='flashCard-Heading'>Flash Card</h1>
+      <h1 className='flashCard-Heading'>{t('flashCards.heading')}</h1>
       <div className="flashcard-container">
       <div
           className={`flashcard ${isFlipped ? "flipped" : ""}`}
@@ -60,7 +60,7 @@ const FlashCard = () => {
           </div>
         )}
       </div>
-      <button onClick={handleNext} className="next-button">Next</button>
+      <button onClick={handleNext} className="next-button">{t('flashCards.button')}</button>
     </div>
     </div>
   );

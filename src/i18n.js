@@ -14,6 +14,16 @@ i18n.use(initReactI18next).init({
         header: {
           title: "Let's Go!",
           subtitle: "KANJI"
+        },
+        app:{
+          heading: "JLPT Kanji list"
+        },
+        flashCards:{
+          heading: "Flash Card",
+          button: "Next"
+        },
+        quiz:{
+          heading: "Quiz"
         }
       }
     },
@@ -28,6 +38,16 @@ i18n.use(initReactI18next).init({
         header: {
           title: "行こう！",
           subtitle: "漢字"
+        },
+        app:{
+          heading: "JLPT漢字リスト"
+        },
+        flashCards:{
+          heading: "フラッシュカード",
+          button: "つぎ"
+        },
+        quiz:{
+          heading: "クイズ"
         }
       }
     }
