@@ -54,16 +54,13 @@ const App = () => {
       {/* Modal */}
       {isModalOpen && (
         <div className="modal-overlay" onClick={closeModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="close-button" onClick={closeModal}>
-              &times;
-            </button>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}> 
             {selectedKanji && (
               <>
                 <h2 className='selectedKanji'>{selectedKanji.kanji}</h2>
-                <p className='details'><strong>Meaning:</strong> {selectedKanji.meaning}</p>
-                <p className='details'><strong>On-reading:</strong> {selectedKanji.onyomi}</p>
-                <p className='details'><strong>Kun-reading:</strong> {selectedKanji.kunyomi}</p>
+                <p className='details'><strong>Meaning :</strong> { selectedKanji.meaning}</p>
+                <p className='details'><strong>On-reading :</strong> {selectedKanji.onyomi}</p>
+                <p className='details'><strong>Kun-reading :</strong> {selectedKanji.kunyomi}</p>
               </>
             )}
           </div>
