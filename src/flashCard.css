@@ -37,19 +37,17 @@
   }
   
   .flashcard-front {
-    background-color: #2a9d8f;
-    color: #f9f1f0;
+    background-color: #f9f1f0;
+    color: #e0765b;
     font-size: 82px;
   }
   
   .flashcard-back {
-    background-color: #f8afa6;
+    background-color: #e0765b;
     color: #f9f1f0;
-    transform: rotateY(180deg);
     font-size: 24px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: flex-start;
   }
   
@@ -57,9 +55,10 @@
     margin: 1rem;
   }
 
-  .flipped .flashcard-front {
-    transform: rotateY(360deg);
-  }
+  /* .flipped .flashcard-front {
+    transform: rotateY(1440deg);
+    transition: transform 10.6s;
+  } */
   
   .flipped .flashcard-back {
     transform: rotateY(360deg);

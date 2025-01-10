@@ -39,9 +39,15 @@ const quiz = () => {
     if (selectedIndex === currentIndex) {
       setMessage("Correct! 🎉");
     } else {
-      setMessage(`Incorrect! The correct answer is "${kanjiList[currentIndex].meaning}".`);
+      setMessage(
+        <>
+          Incorrect! The correct answer is{" "}
+          <span style={{ color: "red" }}>"{kanjiList[currentIndex].meaning}"</span>.
+        </>
+      );
     }
   };
+  
 
   const currentKanji = kanjiList[currentIndex];
 
@@ -62,10 +68,11 @@ const quiz = () => {
             >
           {kanjiList[optionIndex].meaning}
             </button>
+            
           ))}
         </div>
         {message && <div className="quiz-message">{message}</div>}
-      
+          
    </div>
    <button onClick={handleNext} className="nextQuiz-button">{t('flashCards.button')}</button>
     </div>
