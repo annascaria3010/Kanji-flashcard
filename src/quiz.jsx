@@ -57,8 +57,11 @@ const quiz = () => {
 
   const handleReset =()=> {
     setScore (0);
-    
-
+    const randomIndex = Math.floor(Math.random() * kanjiList.length); // Get a random index
+    setCurrentIndex(randomIndex);
+    setOptions(generateOptions(randomIndex));
+    setMessage("");
+    setIsAnswered(false);
   }
 
   const currentKanji = kanjiList[currentIndex];
