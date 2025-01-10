@@ -15,6 +15,8 @@ const quiz = () => {
   const [currentIndex, setCurrentIndex] =useState(Math.floor(Math.random() * kanjiList.length));
   const [options, setOptions] = useState(generateOptions(currentIndex));
   const [message, setMessage] = useState("");
+  const [score,setScore] = useState(0)
+  const [isAnswered, setIsAnswered] = useState(false);
 
   function generateOptions(correctIndex) {
     const optionsSet = new Set();
@@ -33,11 +35,16 @@ const quiz = () => {
     setCurrentIndex(randomIndex);
     setOptions(generateOptions(randomIndex));
     setMessage("");
+    setIsAnswered(false);
   };
 
   const handleOptionClick = (selectedIndex) => {
+    if (isAnswered) return;
+
+    setIsAnswered(true);
     if (selectedIndex === currentIndex) {
       setMessage("Correct! 🎉");
+      setScore((prevScore) => prevScore + 1);
     } else {
       setMessage(
         <>
@@ -47,7 +54,12 @@ const quiz = () => {
       );
     }
   };
-  
+
+  const handleReset =()=> {
+    setScore (0);
+    
+
+  }
 
   const currentKanji = kanjiList[currentIndex];
 
@@ -55,7 +67,11 @@ const quiz = () => {
     <div className='Home'>
     <Header/>
     <Navbar/>
+    <button onClick={handleReset} className="reset-button">{t('flashCards.reset')}</button>
    <h1 className='Heading'>{t('quiz.heading')}</h1>
+
+   <div className='scoreBoard'> Score : {score}</div>
+    
    <div className='quiz-box'>
       
         <h2 className='kanji'>{currentKanji.kanji}</h2>
@@ -75,6 +91,7 @@ const quiz = () => {
           
    </div>
    <button onClick={handleNext} className="nextQuiz-button">{t('flashCards.button')}</button>
+    
     </div>
   )
 }

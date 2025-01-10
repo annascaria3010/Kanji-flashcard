@@ -20,7 +20,8 @@ i18n.use(initReactI18next).init({
         },
         flashCards:{
           heading: "Flash Card",
-          button: "Next"
+          button: "Next",
+          reset: "Reset"
         },
         quiz:{
           heading: "Quiz"
@@ -44,7 +45,8 @@ i18n.use(initReactI18next).init({
         },
         flashCards:{
           heading: "フラッシュカード",
-          button: "つぎ"
+          button: "つぎ",
+          reset: "リセット"
         },
         quiz:{
           heading: "クイズ"

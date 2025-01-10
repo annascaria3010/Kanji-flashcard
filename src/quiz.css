@@ -1,14 +1,23 @@
 .Heading{
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 1rem;
     padding: 16px;
+  }
+
+  .scoreBoard{
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    border: 2px solid ;
+    padding: 15px;
+    font-size: x-large;
+    margin: 20px auto;
   }
 
 .quiz-box {
     text-align: center;
-    margin: 20px auto;
-    margin-top: 50px;
+    margin:auto;
     background-color: #f5e7e7;
     width: 400px;
     height: 400px;
@@ -49,8 +58,7 @@
   }
   
   .quiz-option:hover {
-    background-color: #e9c46a;
-    color: #ffffff;
+    background-color: #ffb700;
   }
   
   .quiz-message {
