@@ -5,12 +5,21 @@ import './settings.css'
 
 
 const settings = () => {
+
+  const handleAdd= () => {
+    
+  }
+
   return (
     <div className='Home'>
     <Header/>
     <Navbar/>
     <div className='settings-headings'>
-    <h2 className='headings'>Add</h2>
+    <h2 className='headings'
+      onClick={handleAdd}>
+      Add
+      </h2>
+
     <h2 className='headings'>Edit</h2>
     <h2 className='headings'>Delete</h2>
     </div>

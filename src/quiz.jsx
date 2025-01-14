@@ -49,7 +49,7 @@ const quiz = () => {
       setMessage(
         <>
           Incorrect! The correct answer is{" "}
-          <span style={{ color: "red" }}>"{kanjiList[currentIndex].meaning}"</span>.
+          <span style={{ color: "red" }}>"{kanjiList[currentIndex].kunyomi}"</span>.
         </>
       );
     }
@@ -85,7 +85,7 @@ const quiz = () => {
             onClick ={() => handleOptionClick(optionIndex)}
             className='quiz-option'
             >
-          {kanjiList[optionIndex].meaning}
+          {kanjiList[optionIndex].kunyomi}
             </button>
             
           ))}
